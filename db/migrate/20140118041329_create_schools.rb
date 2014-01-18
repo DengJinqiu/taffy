@@ -1,10 +1,10 @@
 class CreateSchools < ActiveRecord::Migration
   def change
     create_table :schools do |t|
-      t.refereneces :region, index: true
+      t.references :region, index: true
       t.string :name
       t.string :abbrev
-      t.bool :active
+      t.boolean :active
     end
   end
 end

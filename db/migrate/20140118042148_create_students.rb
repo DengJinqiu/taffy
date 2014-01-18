@@ -4,7 +4,7 @@ class CreateStudents < ActiveRecord::Migration
       t.references :school, index: true
       t.string :first_name
       t.string :last_name
-      t.bool :active
+      t.boolean :active
     end
   end
 end

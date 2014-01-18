@@ -6,7 +6,7 @@ class CreatePrograms < ActiveRecord::Migration
       t.references :program_type, index: true
       t.integer :regular_courses_per_year
       t.integer :group_courses_per_year
-      t.bool :active
+      t.boolean :active
     end
   end
 end

@@ -2,7 +2,7 @@ class CreateRegions < ActiveRecord::Migration
   def change
     create_table :regions do |t|
       t.string :name
-      t.bool active
+      t.boolean :active
     end
   end
 end
