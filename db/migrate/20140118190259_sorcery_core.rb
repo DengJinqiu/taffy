@@ -9,8 +9,7 @@ class SorceryCore < ActiveRecord::Migration
       t.string :type,              :default => nil
 			t.string :remember_me_token, :default => nil
 			t.datetime :remember_me_token_expires_at, :default => nil
-
-      t.timestamps
+      t.boolean :active
     end
   end
 

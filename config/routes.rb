@@ -1,6 +1,21 @@
 Taffy::Application.routes.draw do
   get 'users/verify' => 'users#verify'
 
+  get 'terms/current' => 'terms#current'
+
+  resources :teachers do
+    resources :courses
+  end
+
+  resources :courses do
+    resources :students
+    resources :schedules
+  end
+
+  resources :rosters do
+    resources :attendances
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
