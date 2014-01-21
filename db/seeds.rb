@@ -59,6 +59,7 @@ Schedule.create(course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-0
 Schedule.create(course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 2)
 Schedule.create(course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 3)
 Schedule.create(course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 4)
+Schedule.create(course_id: @cou4.id, start_date: '2014-01-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 5)
 
 Roster.create(student_id: @stu1.id, course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-03-31')
 Roster.create(student_id: @stu2.id, course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-03-31')
