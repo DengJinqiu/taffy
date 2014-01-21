@@ -14,7 +14,7 @@ Roster.delete_all
 Schedule.delete_all
 AttendanceMarking.delete_all
 
-@ter1 = Term.create(name: '2013 fall', start_date: '2013-09-01', end_date: '2014-02-31', current: true)
+@ter1 = Term.create(name: '2013 fall', start_date: '2013-09-01', end_date: '2014-03-31', current: true)
 
 @tea1 = User.create(email: 'teacher1@gmail.com', password: '123', password_confirmation: '123', first_name: 'Tom', last_name: 'Green', type: 'Teacher', active: true)
 @tea2 = User.create(email: 'teacher2@gmail.com', password: '123', password_confirmation: '123', first_name: 'Jerry', last_name: 'White', type: 'Teacher', active: true)
@@ -54,15 +54,15 @@ Enrollment.create(program_id: @pro2.id, student_id: @stu2.id)
 Enrollment.create(program_id: @pro3.id, student_id: @stu3.id)
 Enrollment.create(program_id: @pro3.id, student_id: @stu4.id)
 
-Schedule.create(course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-02-31', start_time: 600, end_time: 700, day_of_week: 2)
-Schedule.create(course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-02-31', start_time: 600, end_time: 700, day_of_week: 4)
-Schedule.create(course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-02-31', start_time: 600, end_time: 700, day_of_week: 2)
-Schedule.create(course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-02-31', start_time: 600, end_time: 700, day_of_week: 3)
-Schedule.create(course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-02-31', start_time: 600, end_time: 700, day_of_week: 4)
+Schedule.create(course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 2)
+Schedule.create(course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 4)
+Schedule.create(course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 2)
+Schedule.create(course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 3)
+Schedule.create(course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-03-31', start_time: 600, end_time: 700, day_of_week: 4)
 
-Roster.create(student_id: @stu1.id, course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-02-31')
-Roster.create(student_id: @stu2.id, course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-02-31')
-Roster.create(student_id: @stu3.id, course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-02-31')
-Roster.create(student_id: @stu4.id, course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-02-31')
+Roster.create(student_id: @stu1.id, course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-03-31')
+Roster.create(student_id: @stu2.id, course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-03-31')
+Roster.create(student_id: @stu3.id, course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-03-31')
+Roster.create(student_id: @stu4.id, course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-03-31')
 
 AttendanceMarking.create(name: 'attend', abbrev: 'attend')
