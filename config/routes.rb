@@ -10,6 +10,7 @@ Taffy::Application.routes.draw do
   resources :courses do
     resources :students
     resources :schedules
+    resources :rosters
   end
 
   resources :rosters do
