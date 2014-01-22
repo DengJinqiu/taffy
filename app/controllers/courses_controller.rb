@@ -25,6 +25,7 @@ class CoursesController < ApplicationController
   private
   def info(course)
     {id: course.id,
+     term_id: course.term_id,
      name: course.name, 
      school_name: course.school_name,
      instrument_name: course.instrument_name,
