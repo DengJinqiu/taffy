@@ -13,7 +13,7 @@ class RostersController < ApplicationController
             teacher_first_name = Teacher.find(attendance.teacher_id).first_name
             teacher_last_name = Teacher.find(attendance.teacher_id).last_name
           else 
-            attendance_id = nil
+            attendance_id = -1
             attendance_marking_id = nil
             teacher_first_name = nil
             teacher_last_name = nil
