@@ -7,11 +7,24 @@ class RostersController < ApplicationController
         cur = Date.parse(params[:date])
         if cur >= roster.start_date && cur <= roster.end_date
           attendance = Attendance.where(roster_id: roster.id, date: cur).first
-          attendance_marking_id = attendance ? attendance.attendance_marking_id : nil
-          res.push({id: roster.id,
-                    first_name: Student.find(roster.student_id).first_name,
-                    last_name: Student.find(roster.student_id).last_name,
-                    attendance_marking_id: attendance_marking_id})
+          if attendance
+            attendance_id = attendance.id
+            attendance_marking_id = attendance.attendance_marking_id
+            teacher_first_name = Teacher.find(attendance.teacher_id).first_name
+            teacher_last_name = Teacher.find(attendance.teacher_id).last_name
+          else 
+            attendance_id = nil
+            attendance_marking_id = nil
+            teacher_first_name = nil
+            teacher_last_name = nil
+          end
+          res.push({roster_id: roster.id,
+                    attendance_id: attendance_id,
+                    attendance_marking_id: attendance_marking_id,
+                    student_first_name: Student.find(roster.student_id).first_name,
+                    Student_last_name: Student.find(roster.student_id).last_name,
+                    teacher_first_name: teacher_first_name,
+                    teacher_last_name: teacher_last_name})
         end
       end
       render json: res.to_json
