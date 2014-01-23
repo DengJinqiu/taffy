@@ -22,7 +22,7 @@ class RostersController < ApplicationController
                     attendance_id: attendance_id,
                     attendance_marking_id: attendance_marking_id,
                     student_first_name: Student.find(roster.student_id).first_name,
-                    Student_last_name: Student.find(roster.student_id).last_name,
+                    student_last_name: Student.find(roster.student_id).last_name,
                     teacher_first_name: teacher_first_name,
                     teacher_last_name: teacher_last_name})
         end
