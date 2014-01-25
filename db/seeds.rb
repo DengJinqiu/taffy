@@ -68,6 +68,7 @@ Schedule.create(course_id: @cou4.id, start_date: '2014-01-01', end_date: '2014-0
 @ros4 = Roster.create(student_id: @stu2.id, course_id: @cou2.id, start_date: '2013-09-01', end_date: '2014-03-31')
 @ros5 = Roster.create(student_id: @stu3.id, course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-03-31')
 @ros6 = Roster.create(student_id: @stu4.id, course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-03-31')
+@ros7 = Roster.create(student_id: @stu4.id, course_id: @cou1.id, start_date: '2013-09-01', end_date: '2014-03-31')
 
 AttendanceMarking.create(name: 'student attend', abbrev: 'SA')
 AttendanceMarking.create(name: 'school closing', abbrev: 'SC')
