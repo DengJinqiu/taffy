@@ -69,6 +69,6 @@ Schedule.create(course_id: @cou4.id, start_date: '2014-01-01', end_date: '2014-0
 @ros5 = Roster.create(student_id: @stu3.id, course_id: @cou3.id, start_date: '2013-09-01', end_date: '2014-03-31')
 @ros6 = Roster.create(student_id: @stu4.id, course_id: @cou4.id, start_date: '2013-09-01', end_date: '2014-03-31')
 
-@atm1 = AttendanceMarking.create(name: 'attend', abbrev: 'attend')
-
-Attendance.create(date: '2013-10-31', teacher_id: @tea1.id, roster_id: @ros1.id, attendance_marking_id: @atm1.id)
+AttendanceMarking.create(name: 'student attend', abbrev: 'SA')
+AttendanceMarking.create(name: 'school closing', abbrev: 'SC')
+AttendanceMarking.create(name: 'teacher absent', abbrev: 'TA')

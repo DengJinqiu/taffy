@@ -11,11 +11,8 @@ Taffy::Application.routes.draw do
     resources :rosters
   end
 
-  resources :rosters do
-    resources :attendances
-  end
-
   resources :schedules
+  resources :attendances
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

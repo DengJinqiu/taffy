@@ -27,6 +27,12 @@ class AttendancesController < ApplicationController
     end
   end
 
+  def destroy
+    attendance = Attendance.find(params[:id])
+    attendance.destroy
+    render nothing: true
+  end
+
   private
   def attendance_params
     params.permit(:roster_id, :teacher_id, :attendance_marking_id, :date)
