@@ -14,7 +14,7 @@ class AttendancesController < ApplicationController
       attendance.update_attributes(attendance_params)
       render json: {status: 'success'}.to_json
     else
-      render json: nothing: true
+      render nothing: true
     end
   end
 
@@ -23,7 +23,7 @@ class AttendancesController < ApplicationController
     if attendance.save
       render json: {id: attendance.id}.to_json
     else
-      render json: nothing: true
+      render nothing: true
     end
   end
 
