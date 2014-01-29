@@ -12,7 +12,7 @@ class AttendancesController < ApplicationController
     attendance = Attendance.find(params[:id])
     if attendance
       attendance.update_attributes(attendance_params)
-      render json: {status: 'success'}.to_json
+      render json: {attendance_id: params[:id]}.to_json
     else
       render nothing: true
     end
@@ -21,7 +21,7 @@ class AttendancesController < ApplicationController
   def create
     attendance = Attendance.new(attendance_params)
     if attendance.save
-      render json: {id: attendance.id}.to_json
+      render json: {attendance_id: attendance.id}.to_json
     else
       render nothing: true
     end
