@@ -29,8 +29,12 @@ class AttendancesController < ApplicationController
 
   def destroy
     attendance = Attendance.find(params[:id])
-    attendance.destroy
-    render nothing: true
+    if attendance
+      attendance.destroy
+      render json: {status: 'success'}.to_json
+    else
+      render nothing: true
+    end
   end
 
   private
