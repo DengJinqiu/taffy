@@ -36,18 +36,19 @@ Attendance.delete_all
 @couType1 = CourseType.create(name: 'Regular Class')
 
 @pro1 = Program.create(program_type_id: @proType1.id, instrument_id: @ins1.id, school_id: @sch1.id, regular_courses_per_year: 100, group_courses_per_year: 5, active: true)
+@pro2 = Program.create(program_type_id: @proType1.id, instrument_id: @ins1.id, school_id: @sch1.id, regular_courses_per_year: 100, group_courses_per_year: 5, active: true)
 
 Assignment.create(program_id: @pro1.id, teacher_id: @tea1.id)
 Assignment.create(program_id: @pro1.id, teacher_id: @tea2.id)
 
 @cou1 = Course.create(program_id: @pro1.id, term_id: @ter1.id, name: 'Class 1', course_type_id: @couType1.id)
 @cou2 = Course.create(program_id: @pro1.id, term_id: @ter1.id, name: 'Class 2', course_type_id: @couType1.id)
-@cou3 = Course.create(program_id: @pro1.id, term_id: @ter1.id, name: 'Class 3', course_type_id: @couType1.id)
+@cou3 = Course.create(program_id: @pro2.id, term_id: @ter1.id, name: 'Class 3', course_type_id: @couType1.id)
 
 Enrollment.create(program_id: @pro1.id, student_id: @stu1.id)
 Enrollment.create(program_id: @pro1.id, student_id: @stu2.id)
 Enrollment.create(program_id: @pro1.id, student_id: @stu3.id)
-Enrollment.create(program_id: @pro1.id, student_id: @stu4.id)
+Enrollment.create(program_id: @pro2.id, student_id: @stu4.id)
 
 Schedule.create(course_id: @cou1.id, start_date: '2014-01-27', end_date: '2014-02-21', start_time: 600, end_time: 700, day_of_week: 2)
 Schedule.create(course_id: @cou1.id, start_date: '2014-04-01', end_date: '2014-04-10', start_time: 600, end_time: 700, day_of_week: 3)
@@ -60,7 +61,6 @@ Roster.create(student_id: @stu2.id, course_id: @cou1.id, start_date: '2014-01-27
 Roster.create(student_id: @stu2.id, course_id: @cou2.id, start_date: '2014-03-01', end_date: '2014-05-31')
 Roster.create(student_id: @stu3.id, course_id: @cou1.id, start_date: '2014-01-27', end_date: '2014-05-31')
 Roster.create(student_id: @stu3.id, course_id: @cou2.id, start_date: '2014-01-27', end_date: '2014-05-31')
-Roster.create(student_id: @stu3.id, course_id: @cou3.id, start_date: '2014-01-27', end_date: '2014-05-31')
 Roster.create(student_id: @stu4.id, course_id: @cou3.id, start_date: '2014-01-27', end_date: '2014-05-31')
 
 AttendanceMarking.create(name: 'student attend', abbrev: 'SA')
