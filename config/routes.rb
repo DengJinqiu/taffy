@@ -5,6 +5,7 @@ Taffy::Application.routes.draw do
 
   resources :teachers do
     resources :courses
+    resources :schedules
   end
 
   resources :courses do
