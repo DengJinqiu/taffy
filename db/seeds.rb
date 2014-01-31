@@ -39,7 +39,7 @@ Attendance.delete_all
 @pro2 = Program.create(program_type_id: @proType1.id, instrument_id: @ins1.id, school_id: @sch1.id, regular_courses_per_year: 100, group_courses_per_year: 5, active: true)
 
 Assignment.create(program_id: @pro1.id, teacher_id: @tea1.id)
-Assignment.create(program_id: @pro1.id, teacher_id: @tea2.id)
+Assignment.create(program_id: @pro2.id, teacher_id: @tea2.id)
 
 @cou1 = Course.create(program_id: @pro1.id, term_id: @ter1.id, name: 'Class 1', course_type_id: @couType1.id)
 @cou2 = Course.create(program_id: @pro1.id, term_id: @ter1.id, name: 'Class 2', course_type_id: @couType1.id)
